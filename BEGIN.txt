@@ -12,3 +12,13 @@ FUNCTION wordMatch OUTPUT YES/NO
 		IF incorrect letter = LIGHT GREY 
 
 	RETURN word entered with letter coloured  
+
+
+Game view
+enter word:
+[][][][][]
+[][][][][]
+[][][][][]
+[][][][][]
+[][][][][]
+[][][][][]
