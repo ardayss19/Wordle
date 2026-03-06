@@ -26,8 +26,10 @@ FUCNTIONS
 */
 
 // rachel
-function wordMatch(str) {
-
+function wordMtach(inputWord,answerWord) {
+    if (inputWord == answerWord)
+        console.log("CONGRATS YOU WON!!!");
+    return answerWord;
 }
 
 //rachel
@@ -55,15 +57,22 @@ function inputToDisplay(str) {
 
 // rachel
 function restartGame() {
-    //restarts with random word
-    inputWord = ""
-    displayArray  = ["*****","*****","*****","*****","*****","*****"]
+    // restarts with random word
+    answerWord = possibleWords[Math.floor((Math.random()*100))]
+
+    //reset number of strikes
+    // do we need a new const for the number of attempts? 
+
+    // print to inform the player
+    console.log("Restart the game, Guess the new word")
 }
 
 // rachel
+// this only happens if they dont get the word after the 6 attempts: if attempts >6 => function endGame
 function endGame() {
-    // this only happen if they do not get the word
-    // says game finished you suck, lol
+    // just need to print 
+    console.log("Game finished, you suck, LOL!");
+    console.log("The correct answer was:" + answerWord);
 }
 
 function chooseAnswerWord() {
