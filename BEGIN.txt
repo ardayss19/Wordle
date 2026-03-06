@@ -1,0 +1,14 @@
+BEGIN 
+INPUT 5 letters e.g. SNACK 
+FUNCTION wordMatch OUTPUT YES/NO
+	IF YES show the word = CONGRATS YOU WON!!!
+	RETURN word 
+
+	IF NO
+
+	FUNCTION letterMatch 
+		IF correct letter but wrong place = YELLOW
+		IF correct letter and correct place = GREEN 
+		IF incorrect letter = LIGHT GREY 
+
+	RETURN word entered with letter coloured  
