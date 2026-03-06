@@ -117,7 +117,7 @@ async function gameLoop() {
 
     if (wordMatch(cleanGuess)) {
       won = true;
-      console.log("CONGRATS YOU !!!");
+    
     } else {
       const colouredWord = letterMatch(cleanGuess);
       inputToDisplay(colouredWord);
