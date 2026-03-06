@@ -40,8 +40,8 @@ The logic for letter matching was the most challening, actually requires a bit o
 
 
 # Bugs
-    1. letter matching always shows yellow, so even if you duplicate a letter and it doesn't appear more than once it will show yellow e.g. if the word was QUICK and wrote QQQQQ the first letter will be green adn the others would be yellow
-    2. I have a decent idea on how to fix the above essentially you need to create a another iterable for it to loop through with the remaining non-green letters as the rest is binary yellow or grey (does it exist in the string or not) which also has the benefit of not needing to be ordered, just care about existance (only green cares about order)
+1. letter matching always shows yellow, so even if you duplicate a letter and it doesn't appear more than once it will show yellow e.g. if the word was QUICK and wrote QQQQQ the first letter will be green adn the others would be yellow
+2. I have a decent idea on how to fix the above essentially you need to create a another iterable for it to loop through with the remaining non-green letters as the rest is binary yellow or grey (does it exist in the string or not) which also has the benefit of not needing to be ordered, just care about existance (only green cares about order)
 
 # Future
 Fix the yellow letters <br>
