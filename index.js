@@ -6,7 +6,7 @@ VARIABLES
 
 //readline stuff for user inputs
 const readLine = require("node:readLine")
-const chalk = require("node:chalk@4")
+const chalk = require("chalk")
 
 
 const {stdin: input, stdout: output} = require("node:process");
@@ -15,7 +15,7 @@ const rl = readLine.createInterface({input, output});
 
 let inputWord = ""
 let displayArray = ["*****","*****","*****","*****","*****","*****"] // add words from input, is blank before hand
-const answerWord = "START"
+let answerWord = "START"
 const possibleWords = ["SNACK","SLATE","START"]
 
 let attempts = 0
@@ -67,11 +67,11 @@ function endGame() {
 }
 
 function chooseAnswerWord() {
-    const answerWord = possibleWords[Math.floor((Math.random()*possibleWords.length))]
+    answerWord = possibleWords[Math.floor((Math.random()*possibleWords.length))]
     return answerWord
 }
 
-function askQuestion() {
+function askQuestion(query) {
     return new Promise(ans => rl.question(query, ans))
 }
 
@@ -88,8 +88,8 @@ async function gameLoop() {
     //chooseAnswerWord()
     display(displayArray)
 
-    while (attempts <= 6 && !won) {
-        const guess = await askQuestion(`Attempt ${attempts} + 1/6: `)
+    while (attempts < 6 && !won) {
+        const guess = await askQuestion(`Attempt ${attempts + 1}/6: `)
         const cleanGuess = guess.toUpperCase().trim()
 
         if (wordMatch(cleanGuess)) {
